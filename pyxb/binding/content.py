@@ -798,6 +798,8 @@ class WildcardUse (_FACSymbol):
 
 import collections
 
+collections.MutableSequence = collections.abc.MutableSequence
+
 # Do not inherit from list; that's obscene, and could cause problems with the
 # internal assumptions made by Python.  Instead delegate everything to an
 # instance of list that's held internally.  Inherit from the ABC that
